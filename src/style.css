@@ -7,6 +7,60 @@
 
 /*** Style ***/
 body {
-    background-color: black;
-    color: white;
+    background-image: url('https://img.freepik.com/free-vector/weather-icons-collection_1234-53.jpg?w=740&t=st=1721293767~exp=1721294367~hmac=05d3924266cb363758e4866ac4895624449038bea2c17da9f73d8d2f4ed496bb');
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    margin: 8px 0;
+}
+
+form {
+    margin: 8px;
+    background-color: lightskyblue;
+}
+
+section.weather-forecast {
+    border: 5px solid lightblue;
+    padding: 1%;
+    border-radius: 15px;
+}
+
+.weather-card {
+    padding: 3%;
+    border-radius: 15px;
+    background-color: lightskyblue;
+}
+
+/*** Layout ***/
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.weather-forecast {
+    flex: 1 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    grid-template-rows: repeat(4, minmax(100px, 1fr));
+    gap: 8px;
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    grid-column: 1 / 6;
+    grid-row: 1 / 4;
+    font-size: 48px;
 }
