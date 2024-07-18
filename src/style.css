@@ -1,0 +1,12 @@
+/*** Init ***/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*** Style ***/
+body {
+    background-color: black;
+    color: white;
+}
